@@ -1,0 +1,126 @@
+
+Creating Measures Table
+10
+<p class="MsoNormal"><b>Step 3 – Measures Table</b></p><p class="MsoNormal">Measures Table upon creating all the DAX measures.&nbsp;</p><p class="MsoNormal"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1443/10/2.jpg"><b><br></b></p><p class="MsoNormal"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1443/10/5.jpg"><b><br></b></p><p class="MsoNormal"><b><br></b></p><p class="MsoNormal"><b>Steps :</b></p><p class="MsoNormal"><b> </b><o:p></o:p></p>
+
+<p class="MsoNormal"><b>Create a new Table named – Measures Table. </b><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:.25in">1. Begin by selecting "Transform
+data" to access Power Query.<o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:.25in">2. Navigate to "Enter Data" within
+Power Query.<o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:.25in">3. Give the table a new name, such as
+"Measures Table," and confirm by clicking OK.<o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:.25in">4. After entering the data, close the
+Power Query window by selecting "Close &amp; Apply."<o:p></o:p></p>
+
+<p class="MsoNormal"><b>DAX Measures added are listed below – </b><o:p></o:p></p>
+
+<p class="MsoNormal"><u>Measures Created are: </u><o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Total Emp = COUNTROWS('HR Analytics Data')<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Male = CALCULATE([Total Emp], 'HR
+Analytics Data'[Gender]= "Male" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Male = DIVIDE([Male], [Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Female = CALCULATE([Total Emp], 'HR
+Analytics Data'[Gender]= "Female" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Female = DIVIDE([Female], [Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Due for Promotion = CALCULATE([Total Emp], 'HR Analytics Data'[Promotion Status] = "Due" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Not Due for Promotion = CALCULATE([Total Emp], 'HR Analytics Data'[Promotion Status] = "Not due" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Due for Promotion = DIVIDE([Due for Promotion],
+[Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Not Due for Promotion = DIVIDE([Not Due for Promotion],
+[Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->High Performance Rating = CALCULATE([Total Emp], 'HR
+Analytics Data'[Performance Status]= "High" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Low Performance Rating = CALCULATE([Total Emp], 'HR
+Analytics Data'[Performance Status]= "Low" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% High Performance Rating
+= DIVIDE([High
+Performance Rating], [Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Low Performance Rating =
+DIVIDE([Low
+Performance Rating], [Total Emp], 0<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Active Employees = CALCULATE([Total Emp], 'HR
+Analytics Data'[Employee Attrition] = "Active
+Employee" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Ex Employees&nbsp; = CALCULATE([Total Emp], 'HR Analytics Data'[Employee Attrition] =
+"Ex-Employee" )<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Active Employees = DIVIDE([Active
+Employees], [Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->% Ex Employees&nbsp; = DIVIDE([Ex Employees], [Total Emp], 0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->AverageAge = AVERAGE('HR Analytics Data'[Age])<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Job Satisfaction % = DIVIDE ( AVERAGE('HR Analytics
+Data'[JobSatisfaction]),4,0)<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Attrition Arrow = SWITCH(TRUE(), [% Ex Employees] &lt; 0, UNICHAR(9660), UNICHAR(9650))<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Attrition Rate Color = IF([% Ex Employees] &gt; 0.1, "#D6272C","#1AAB40")<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Average Hourly Rate = AVERAGE('HR Analytics
+Data'[HourlyRate])<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Average Service Yrs = AVERAGE('HR Analytics
+Data'[YearsAtCompany])<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Job Satisfaction Arrow = SWITCH (TRUE(), ([Job Satisfaction %]*100)&gt;50, UNICHAR(9650), ([Job Satisfaction %]*100)&lt;50, UNICHAR(9660), UNICHAR(9654))<o:p></o:p></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><!--[if !supportLists]-->·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><!--[endif]-->Job Satisfaction Arrow
+Color = SWITCH(TRUE(), [Job Satisfaction %]
+&gt; 0.5, "#1AAB40", [Job Satisfaction %]
+&lt; 0.5, "#D6272C", [Job Satisfaction %] = 0.5, "#DB7228")</p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="inherit, serif"><span style="background-color: rgb(255, 255, 254);"><o:p><br></o:p></span></font></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="inherit, serif"><span style="background-color: rgb(255, 255, 254);"><o:p><u>Steps to create Measures -&nbsp;</u></o:p></span></font></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="inherit, serif"><span style="background-color: rgb(255, 255, 254);"><o:p><br></o:p></span></font></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1443/10/1.jpg" style="width: 811.5px; height: 403.655px;"><font face="inherit, serif"><span style="background-color: rgb(255, 255, 254);"><o:p><br></o:p></span></font></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="inherit, serif"><span style="background-color: rgb(255, 255, 254);"><o:p><br></o:p></span></font></p><p class="MsoNormal">Write the DAX code to create each measure.<o:p></o:p></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+
+</p><p class="MsoNormal">Below GIF will provide a step by step guide to create the
+measures.&nbsp;<font face="inherit, serif"><o:p></o:p></font></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1443/10/2.gif" style="width: 811.5px; height: 401.591px;"><font face="inherit, serif"><span style="background-color: rgb(255, 255, 254);"><o:p><br></o:p></span></font></p><p class="MsoNormal"><span style="font-family:&quot;inherit&quot;,serif;mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;</span></p><p class="MsoListParagraphCxSpLast" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+
+</p><p class="MsoNormal">Similarly, add all DAX measures listed above.&nbsp;</p><p class="MsoNormal"><br></p><p class="MsoNormal"></p><p class="MsoNormal"><br></p><p class="MsoNormal"><font face="inherit, serif"><o:p><br></o:p></font></p><p class="MsoNormal"><font face="inherit, serif"><o:p><br></o:p></font></p>
+
+<p><a href="https://zebrabi.com/guide/how-to-create-a-new-measure-in-power-bi/#:~:text=Understanding%20Measures%20in%20Power%20BI&amp;text=Measures%20are%20named%20calculations%20that,calculating%20averages%2C%20or%20creating%20ratios." target="_blank">Measures in Power BI</a><br></p>
+
